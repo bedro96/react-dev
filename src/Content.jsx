@@ -2,8 +2,6 @@ import React from 'react'
 import { Chance } from 'chance';
 import { useState } from 'react';
 
-    
-
 
 function Content() {
     const handleNameChange = () => {
