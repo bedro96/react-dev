@@ -1,4 +1,7 @@
 import React from 'react'
+import { Chance } from 'chance';
+
+const chance = new Chance();
 
 function Content() {
     const handleNameChange = () => {
@@ -11,6 +14,9 @@ function Content() {
         <main>
             <p>This is the content section.</p>
             <p>Hello to: {handleNameChange()}</p>
+            <p>Random name from Chance: {chance.name()}</p>
+            <p>Random age from Chance: {chance.age()}</p>
+            
         </main>
     )
 }
