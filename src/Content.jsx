@@ -18,7 +18,6 @@ function useNow(intervalMs = 1000, zone) {
   return now; // DateTime 객체 반환
 }
 
-
 function Content() {
     const chance = new Chance();
     const [ chanceName, setChanceName ] = useState(() => chance.name());
