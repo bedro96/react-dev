@@ -10,7 +10,7 @@ function App() {
   return (
     <>
       <Header />
-        <div className="card">
+        <div className="card p-8 bg-blue-100 text-red-500 text-1xl rounded-xl mb-8 flex flex-col items-center">
           <button onClick={() => setCount((count) => count + 1)}>
             count is {count}
           </button>
