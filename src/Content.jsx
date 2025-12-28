@@ -4,20 +4,19 @@ import { useState } from 'react';
 
 
 function Content() {
-    const handleNameChange = () => {
-    const names = ['Alice', 'Bob', 'Charlie', 'David'];
-    const int = Math.floor(Math.random() * names.length);
-    return names[int];
-    };
     const chance = new Chance();
-    const [ chanceName, setChanceName ] = useState(null);
-    
+    const [randomName, setRandomName] = useState(() => chance.name());
+
+    const generateName = () => setRandomName(chance.name());
+
     return (
-        <main>
-            <p>This is the content section.</p>
-            <p>Hello to: {handleNameChange()}</p>
-            <p>Random name from Chance: {(chanceName===null)? setChanceName(chance.name()) : chanceName}</p>
-            <p>Random age from Chance: {chance.age()}</p>
+        <main className="bg-gray-800/50 rounded-md p-4 text-gray-200">
+            <p className="mb-2">This is the content section.</p>
+            <p className="mb-2">Hello to: <span className="font-medium">{randomName}</span></p>
+            <div className="flex items-center gap-4">
+              <button onClick={generateName} className="px-3 py-1 bg-indigo-600 rounded-md">Generate Name</button>
+              <div className="text-sm text-gray-400">Random age from Chance: <span className="font-medium">{chance.age()}</span></div>
+            </div>
 
         </main>
     )
