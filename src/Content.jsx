@@ -1,7 +1,22 @@
-import React from 'react'
+import { useState, useEffect } from 'react'
 import { Chance } from 'chance';
-import { useState } from 'react';
+import { DateTime } from 'luxon';
 
+
+function useNow(intervalMs = 1000, zone) {
+  const [now, setNow] = useState(() =>
+    zone ? DateTime.now().setZone(zone) : DateTime.now()
+  );
+
+  useEffect(() => {
+    const id = setInterval(() => {
+      setNow(zone ? DateTime.now().setZone(zone) : DateTime.now());
+    }, intervalMs);
+    return () => clearInterval(id);
+  }, [intervalMs, zone]);
+
+  return now; // DateTime 객체 반환
+}
 
 function Content() {
     const chance = new Chance();
