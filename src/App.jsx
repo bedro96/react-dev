@@ -9,14 +9,14 @@ function App() {
 
   return (
     <>
-      <Header />
+      <Header title="React Development!"/>
         <div className="card">
           <button onClick={() => setCount((count) => count + 1)}>
             count is {count}
           </button>
         </div>
         <p className="read-the-docs">
-          Click on the Vite and React logos to learn more
+          Random name is linked to useState. Clicking the button will not change it.
         </p>
         <Content />
       <Footer />

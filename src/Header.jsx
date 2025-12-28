@@ -1,9 +1,14 @@
 import React from 'react'
+import { DateTime } from 'luxon';
 
-const Header = () => {
+
+const Header = ({title}) => {
+  const now = DateTime.now();
+
   return (
     <header>
-        <h1> Groceries List </h1>
+        <h2> {title} </h2>
+        <p> Current Date and Time: {now.toUTC().toHTTP()} </p>
     </header>
   )
 }
