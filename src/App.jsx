@@ -20,14 +20,13 @@ function App() {
             <button
               onClick={() => setCount((c) => c + 1)}
               className="px-4 py-2 bg-indigo-600 hover:bg-indigo-500 rounded-md font-medium focus:outline-none focus:ring-2 focus:ring-indigo-400"
-            >
+          >
               count is {count}
             </button>
-
+            
             <div className="text-sm text-gray-400">Click the button to increment the counter.</div>
           </div>
         </div>
-
         <div className="mt-8">
           <Content />
         </div>

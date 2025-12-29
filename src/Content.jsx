@@ -27,10 +27,10 @@ function Content() {
     return (
         <main className="bg-gray-800/50 rounded-md p-4 text-gray-200">
             <p className="mb-2">This is the content section.</p>
-            <p className="mb-2">Hello to: <span className="font-medium">{randomName}</span></p>
-            <div className="flex items-center gap-4">
+            <div className="flex flex-col sm:flex-col items-start sm:items-center gap-10 align-right">
               <button onClick={generateName} className="px-3 py-1 bg-indigo-600 rounded-md">Generate Name</button>
-              <div className="text-sm text-gray-400">Random age from Chance: <span className="font-medium">{chance.age()}</span></div>
+              <p className="mb-2">Hello to: <span className="font-medium">{randomName}</span></p>
+              <div className="text-sm text-gray-400">Random age from Chance: {chance.age()}</div>
             </div>
 
         </main>
