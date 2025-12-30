@@ -1,7 +1,6 @@
 import React from 'react'
 import { DateTime } from 'luxon';
 
-
 const Header = ({title}) => {
   const now = DateTime.now();
 

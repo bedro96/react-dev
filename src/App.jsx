@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import Navbar from './Navbar'
 import Header from './Header'
 import Content from './Content'
 import Footer from './Footer'
@@ -8,7 +9,8 @@ function App() {
   const [count, setCount] = useState(0)
 
   return (
-    <div className="min-h-screen flex flex-col bg-gray-900 text-white">
+    <div className="min-h-screen bg-gray-900 text-white pt-14">
+      <Navbar />
       <Header title="React Development!" />
 
       <main className="flex-1 container mx-auto px-4 py-8">
@@ -23,7 +25,7 @@ function App() {
           >
               count is {count}
             </button>
-            
+
             <div className="text-sm text-gray-400">Click the button to increment the counter.</div>
           </div>
         </div>
