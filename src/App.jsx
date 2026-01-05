@@ -4,6 +4,7 @@ import Header from './Header'
 import Content from './Content'
 import Footer from './Footer'
 import './App.css'
+import CardDemo from './CardDemo';
 
 function App() {
   const [count, setCount] = useState(0)
@@ -31,6 +32,9 @@ function App() {
         </div>
         <div className="mt-8">
           <Content />
+        </div>
+        <div className="mt-8 flex justify-center">
+          <CardDemo />
         </div>
       </main>
 
